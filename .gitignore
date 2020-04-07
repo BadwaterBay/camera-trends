@@ -1,6 +1,12 @@
 # Directories #
 ###############
 
+# Local configs #
+######################
+*.python-version
+.vscode/
+.ipynb_checkpoints
+
 # Compiled source #
 ###################
 *.com
@@ -37,6 +43,4 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
- @turtledb
- 
- 
+@turtledb
