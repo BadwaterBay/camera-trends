@@ -25,7 +25,7 @@
   <h1>Camera Trend DUMMY TITLE</h1>
     <div class="row">
       <div class="col-12 mb-3 col-md-10">
-        <p>Dummy text</p>
+        <p><a href="https://github.com/tangaw" target="_blank">Aaron Tang</a> and I wrote a piece of code in Python to scrape Google trends data...</p>
         <div class="mb-3"><h2>h2 dummy heading</h2>
           <p>Dummy text</p>
         </div>
@@ -36,4 +36,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.1/d3.min.js"></script>
 </body>
 </html>
-s
