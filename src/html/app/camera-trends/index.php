@@ -8,17 +8,17 @@
 ?>
 <!doctype html>
 <?php
-  include_once '../common/config.php';
-  include_once '../common/htmlTag.php';
+  include_once '../../common/config.php';
+  include_once '../../common/htmlTag.php';
 ?>
 <head>
-  <?php include_once '../common/head.php'; ?>
+  <?php include_once '../../common/head.php'; ?>
   <title>Camera Trend DUMMY TITLE | Coding - Skyler Dong</title>
 </head>
 <body>
 <?php
-  include_once '../common/navbar.php'; 
-  // include_once '../common/header.php';
+  include_once '../../common/navbar.php'; 
+  // include_once '../../common/header.php';
 ?>
 <!-- Main Content -->
 <div class="container maincontent">
@@ -27,12 +27,12 @@
       <div class="col-12 mb-3 col-md-10">
         <p><a href="https://github.com/tangaw" target="_blank">Aaron Tang</a> and I wrote a piece of code in Python to scrape Google trends data...</p>
         <div class="mb-3"><h2>h2 dummy heading</h2>
-          <p>Dummy text</p>
+          <p>Dummy text: <?php echo PATH; ?></p>
         </div>
       </div>
   </div><!--row-->
 </div><!--maincontent-->
-<?php include_once '../common/footer.php'; ?>
+<?php include_once '../../common/footer.php'; ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.1/d3.min.js"></script>
 </body>
 </html>
