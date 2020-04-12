@@ -3,7 +3,7 @@
   // define("BG_IMG_MD",'medium/SD__A7T3305_Web.jpg');
   // define("BG_IMG_LG",'large/SD__A7T3305_Web_LG.jpg');
   define("SITE_TITLE",'Camera Brand Search Trends of Canon, Nikon and Sony');
-  define("SITE_SUBTITLE",'Comparing Google keyword search trends of camera, DSLR mirrorless of Canon, Nikon and Sony brands');
+  define("SITE_SUBTITLE",'Comparing Google keyword search trends of camera, DSLR and mirrorless across Canon, Nikon and Sony');
   define("SITE_SUBSUBTITLE",'Posted on April 11, 2020');
 ?>
 <!DOCTYPE html>
