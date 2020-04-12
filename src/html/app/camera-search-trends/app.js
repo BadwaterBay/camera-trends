@@ -43,22 +43,28 @@ export default function define(runtime, observer) {
     .variable(observer("data"))
     .define("data",["d3", "FileAttachment"],
       async function(d3, FileAttachment){
-        return(
-          Object.assign((d3.csvParse(await FileAttachment("global-arimean-camera.csv").text(), d3.autoType)).map(({Year_month, Canon_camera}) => ({date: Year_month, value: Canon_camera})), {y: "Google search trend index"})
-        )
+        const data = d3.csvParse(await FileAttachment("global-arimean-camera.csv").text());
+        const columns = data.columns.slice(1);
+        return {
+          y: "Google search trend index",
+          date: data.map(d => d.Year_month),
+          series: data.map(d => ({
+            values: columns.map(k => +d[k])
+          })),
+        }
       }
     );
   
   main
     .variable(observer("line"))
-    .define("line", ["d3", "x", "y"], 
-      function(d3, x, y){
+    .define("line", ["d3", "x", "data", "y"], 
+      function(d3, x, data, y){
         return(
-          d3
-            .line()
-            .defined(d => !isNaN(d.value))
+          d3.line()
+            .defined(d => !isNaN(d))
             .x(d => x(d.date))
-            .y(d => y(d.value))
+            .y((d, i) => y(data.series.values[i]))
+            // .y(d => y(d.value))
         )
       }
     );
@@ -141,9 +147,7 @@ export default function define(runtime, observer) {
     .variable(observer("d3"))
     .define("d3", ["require"], 
       function(require){
-        return(
-          require("d3@5")
-        )
+        return(require("d3@5"))
       }
     );
   

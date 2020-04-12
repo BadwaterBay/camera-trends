@@ -17,7 +17,7 @@
 <meta property="og:image" id="meta_og_image" content="<?php 
   if (!isset($og_image))
     echo 'https://skylerdong.com/images/other/SD-IMG_4854-Edit-Web.jpg';
-  else 
+  else
     echo $og_image;
 ?>" />
 <script>
