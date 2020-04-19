@@ -55,11 +55,13 @@
         </div>
         <div id="plot-mirrorless"></div>
         <p class="footnote">This is work in progress...</p>
+        <div id="plot-map"></div>
       </div>
   </div><!--row-->
 </div><!--maincontent-->
 <?php include_once '../../common/footer.php'; ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.1/d3.min.js"></script>
 <script defer src="app.js"></script>
+<script defer src="app_1.js"></script>
 </body>
 </html>
