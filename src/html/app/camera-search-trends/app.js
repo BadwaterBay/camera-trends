@@ -16,7 +16,7 @@ $(function () {
     const padding = 20;
     const adj = 30;
 
-    // Appendi SVG
+    // Append SVG
     const svg = d3.select(placeholder).append("svg")
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "-"
