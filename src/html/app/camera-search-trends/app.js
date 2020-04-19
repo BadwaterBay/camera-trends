@@ -1,155 +1,142 @@
-export default function define(runtime, observer) {
+$(function () {
+  const data2plot = [
+    ["#plot-camera", "data/global-arimean-camera.csv"],
+    ["#plot-dslr", "data/global-arimean-dslr.csv"],
+    ["#plot-mirrorless", "data/global-arimean-mirrorless.csv"]
+  ].forEach(r => {
+    d3Plot(r[0], r[1]);
+  });
 
-  const main = runtime.module();
+  function d3Plot(placeholder, csvFile) {
+    //------------------------1. PREPARATION------------------------//
+    //-----------------------------SVG------------------------------//  
+    const width = 960;
+    const height = 500;
+    const margin = 20;
+    const padding = 20;
+    const adj = 30;
 
-  const fileAttachments = new Map([["global-arimean-camera.csv", new URL("./data/global-arimean-camera.csv", import.meta.url)]]);
+    // Appendi SVG
+    const svg = d3.select(placeholder).append("svg")
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "-"
+        + adj + " -"
+        + adj + " "
+        + (width + adj * 3) + " "
+        + (height + adj * 3))
+      .style("padding", padding)
+      .style("margin", margin)
+      .classed("svg-content", true);
 
-  main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
-
-  // main.variable(observer())
-  //  .define(["md"], function(md){return(``)});
-
-  main
-    .variable(observer("chart"))
-    .define("chart", 
-      ["d3", "width", "height", "xAxis", "yAxis", "data", "line"], 
-      function(d3, width, height, xAxis, yAxis, data, line) {
-        const svg = d3.create("svg")
-          .attr("viewBox", [0, 0, width, height]);
-        
-        svg
-          .append("g")
-          .call(xAxis);
-
-        svg
-          .append("g")
-          .call(yAxis);
-
-        svg
-          .append("path")
-          .datum(data)
-          .attr("fill", "none")
-          .attr("stroke", "steelblue")
-          .attr("stroke-width", 1.5)
-          .attr("stroke-linejoin", "round")
-          .attr("stroke-linecap", "round")
-          .attr("d", line);
-
-        return svg.node();
-      }
-    );
-
-  main
-    .variable(observer("data"))
-    .define("data",["d3", "FileAttachment"],
-      async function(d3, FileAttachment){
-        const data = d3.csvParse(await FileAttachment("global-arimean-camera.csv").text());
-        const columns = data.columns.slice(1);
+    //-----------------------------DATA-----------------------------//
+    const parseDate = d3.utcParse("%Y-%m-%d");
+    const dataset = d3.csv(csvFile);
+    dataset.then(data => {
+      let slices = data.columns.slice(1).map(name => {
         return {
-          y: "Google search trend index",
-          date: data.map(d => d.Year_month),
-          series: data.map(d => ({
-            values: columns.map(k => +d[k])
-          })),
-        }
-      }
-    );
-  
-  main
-    .variable(observer("line"))
-    .define("line", ["d3", "x", "data", "y"], 
-      function(d3, x, data, y){
-        return(
-          d3.line()
-            .defined(d => !isNaN(d))
-            .x(d => x(d.date))
-            .y((d, i) => y(data.series.values[i]))
-            // .y(d => y(d.value))
-        )
-      }
-    );
-  
-  main
-    .variable(observer("x"))
-    .define("x", ["d3", "data", "margin", "width"], 
-      function(d3, data, margin, width){
-        return(
-          d3
-            .scaleUtc()
-            .domain(d3.extent(data, d => d.date))
-            .range([margin.left, width - margin.right])
-        )
-      }
-    );
-  
-  main
-    .variable(observer("y"))
-    .define("y", ["d3", "data", "height", "margin"], 
-      function(d3, data, height, margin){
-        return(
-          d3
-            .scaleLinear()
-            .domain([0, d3.max(data, d => d.value)]).nice()
-            .range([height - margin.bottom, margin.top])
-        )
-      }
-    );
-  
-  main
-    .variable(observer("xAxis"))
-    .define("xAxis", ["height", "margin", "d3", "x", "width"], 
-      function(height, margin, d3, x, width){
-        return(
-          g => g
-          .attr("transform", `translate(0, ${height - margin.bottom})`)
-          .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0))
-        )
-      }
-    );
+          name: name,
+          values: data.map(d => {
+            return {
+              date: parseDate(d.date),
+              val: +d[name]
+            };
+          })
+        };
+      });
 
-  main
-    .variable(observer("yAxis"))
-    .define("yAxis", ["margin", "d3", "y", "data"], 
-      function(margin, d3, y, data){
-        return(
-          g => g
-            .attr("transform", `translate(${margin.left},0)`)
-            .call(d3.axisLeft(y))
-            .call(g => g.select(".domain").remove())
-            .call(g => g.select(".tick:last-of-type text").clone()
-            .attr("x", 3)
-            .attr("text-anchor", "start")
-            .attr("font-weight", "bold")
-            .text(data.y))
-        )
-      }
-    );
+      // console.log("Column headers", data.columns);
+      // console.log("Column headers without date", data.columns.slice(1));
+      // // returns the sliced dataset
+      // console.log("Slices", slices);
+      // // returns the first slice
+      // console.log("First slice", slices[0]);
+      // // returns the array in the first slice
+      // console.log("A array", slices[0].values);
+      // // returns the date of the first row in the first slice
+      // console.log("Date element", slices[0].values[0].date);
+      // // returns the array's length
+      // console.log("Array length", (slices[0].values).length);
 
-  main
-    .variable(observer("margin"))
-    .define("margin", 
-      function(){
-        return(
-          {top: 20, right: 30, bottom: 30, left: 40}
-        )
-      }
-    );
-  
-  main
-    .variable(observer("height"))
-    .define("height", 
-      function(){
-        return(500)
-      }
-    );
-  
-  main
-    .variable(observer("d3"))
-    .define("d3", ["require"], 
-      function(require){
-        return(require("d3@5"))
-      }
-    );
-  
-  return main;
-}
+      //----------------------------SCALES----------------------------//
+      const xScale = d3.scaleTime().range([0, width]);
+      const yScale = d3.scaleLinear().rangeRound([height, 0]);
+
+      xScale.domain(d3.extent(data, d => {
+        return parseDate(d.date)
+      }));
+
+      yScale.domain([(0), d3.max(slices, c => {
+        return d3.max(c.values, d => {
+          let intRound = 2;
+          return Math.ceil(d.val / intRound) * intRound;
+          // Round to the nearest greater integer intRound
+        });
+      })
+      ]);
+
+      //-----------------------------AXES-----------------------------//
+      const yaxis = d3.axisLeft()
+        .ticks((slices[0].values).length / 20)
+        .scale(yScale);
+
+      const xaxis = d3.axisBottom()
+        .ticks(d3.timeYear.every(1))
+        .tickFormat(d3.timeFormat('%Y'))
+        .scale(xScale);
+
+      //----------------------------LINES-----------------------------//
+      const line = d3.line()
+        .x(d => {return xScale(d.date);})
+        .y(d => {return yScale(d.val);});
+
+      let name = 0;
+      const names = () => {return "line-" + name++;};
+    
+      //-------------------------2. DRAWING---------------------------//
+      //-----------------------------AXES-----------------------------//
+      svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xaxis);
+
+      svg.append("g")
+        .attr("class", "axis")
+        .call(yaxis)
+        .append("text")
+        // .attr("transform", "rotate(0)")
+        .attr("y", 0)
+        .attr("dy", "-1rem")
+        .attr("dx", "8.5rem")
+        .style("text-anchor", "end")
+        .text("Google search index");
+
+      //----------------------------LINES-----------------------------//
+      const lines = svg.selectAll("lines")
+        .data(slices)
+        .enter()
+        .append("g");
+
+      lines.append("path")
+        .attr("class", names)
+        .attr("d", d => {return line(d.values);});
+
+      lines.append("text")
+        .attr("class", "serie_label")
+        .datum(d => {
+          return {
+            name: d.name,
+            value: d.values[d.values.length - 1]
+          };
+        })
+        .attr("transform", d => {
+          return "translate(" + (xScale(d.value.date) + 10)
+            + "," + (yScale(d.value.val) + 5) + ")";
+        })
+        .attr("x", 2)
+        .text(d => {
+          let n = d.name.split("_")[1];
+          return n.charAt(0).toUpperCase() + n.slice(1);
+        });
+    }); // d3
+  } // function d3Plot
+});

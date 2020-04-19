@@ -2,6 +2,23 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Noto+Sans&amp;display=swap" as="style" onload="this.rel='stylesheet'">
+<link rel="stylesheet" type="text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+<script async src="https://kit.fontawesome.com/54c2c027a8.js" crossorigin="anonymous"></script>
+<link rel="preload" type="text/css" href= "<?php echo PATH; ?>/css/prism.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="stylesheet" type="text/css" href= "<?php echo PATH; ?>/css/<?php 
+  echo ($_SERVER["SERVER_NAME"] == "localhost") ? 'styles.css' : 'styles.min.css';?>">
+<style>
+  #masthead-image {
+    background-image: url('<?php echo PATH;?>/images/<?php echo BG_IMG_MD;?>');
+  }
+  @media only screen and (min-width:768px){
+    #masthead-image {
+      background-image: url('<?php echo PATH;?>/images/<?php echo BG_IMG_LG;?>');
+    }
+  }
+</style>
 <meta name="author" content="Tiannong Skyler Dong">
 <meta name="description" content="<?php echo strip_tags(SITE_SUBTITLE);?>" />
 <meta property="og:title" content="<?php echo strip_tags(SITE_TITLE),' - Skyler Dong';?>" />
@@ -17,22 +34,13 @@
 <meta property="og:image" id="meta_og_image" content="<?php 
   if (!isset($og_image))
     echo 'https://skylerdong.com/images/other/SD-IMG_4854-Edit-Web.jpg';
-  else
+  else 
     echo $og_image;
 ?>" />
 <script>
 $meta_og_image_0 = '<?php echo isset($og_image_default) ? $og_image_default : $og_image;?>';
 </script>
-<link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans&amp;display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106597051-4"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-106597051-4');
-</script>
-<link rel="apple-touch-icon" sizes="180x180" href="https://skylerdong.com/images/favicon/apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://skylerdong.com/images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://skylerdong.com/images/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://skylerdong.com/images/favicon/favicon-16x16.png">
 <link rel="manifest" href="https://skylerdong.com/images/favicon/site.webmanifest">
@@ -41,17 +49,10 @@ $meta_og_image_0 = '<?php echo isset($og_image_default) ? $og_image_default : $o
 <meta name="msapplication-TileColor" content="#f9f9f9">
 <meta name="msapplication-config" content="https://skylerdong.com/images/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" type="text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href= "<?php echo PATH; ?>/css/prism.min.css">
-<link rel="stylesheet" type="text/css" href= "<?php echo PATH; ?>/css/<?php 
-  echo ($_SERVER["SERVER_NAME"] == "localhost") ? 'styles.css' : 'styles.min.css';?>">
-<style>
-  #masthead-image {
-    background-image: url('<?php echo PATH;?>/images/<?php echo BG_IMG_MD;?>');
-  }
-  @media only screen and (min-width:768px){
-    #masthead-image {
-      background-image: url('<?php echo PATH;?>/images/<?php echo BG_IMG_LG;?>');
-    }
-  }
-</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106597051-4"></script>
+<script async>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-106597051-4');
+</script>
