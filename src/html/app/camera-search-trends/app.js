@@ -1,8 +1,8 @@
 $(function () {
   const data2plot = [
-    ["#plot-camera", "data/global-arimean-camera.csv"],
-    ["#plot-dslr", "data/global-arimean-dslr.csv"],
-    ["#plot-mirrorless", "data/global-arimean-mirrorless.csv"]
+    ["#plot-camera", "data/camera-arimean-global.csv"],
+    ["#plot-dslr", "data/dslr-arimean-global.csv"],
+    ["#plot-mirrorless", "data/mirrorless-arimean-global.csv"]
   ].forEach(r => {
     d3Plot(r[0], r[1]);
   });
