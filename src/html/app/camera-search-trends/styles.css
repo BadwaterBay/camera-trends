@@ -1,0 +1,49 @@
+/* AXES */
+/* ticks */
+
+.axis line{
+  stroke: #706f6f;
+  stroke-width: 2;
+  shape-rendering: crispEdges;
+}
+  
+/* axis contour */
+.axis path {
+  stroke: #706f6f;
+  stroke-width: 2;
+  shape-rendering: crispEdges;
+}
+  
+/* axis text */
+.axis text {
+  fill: #303030;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+  
+/* LINE CHART */
+path.line-0 {
+  fill: none;
+  stroke: #e41a1c;
+  stroke-width: 2;
+}
+  
+path.line-1 {
+  fill: none;
+  stroke: #377eb8;
+  stroke-width: 2;
+  /* stroke-dasharray: 3; */
+}
+  
+path.line-2 {
+  fill: none;
+  stroke: #4daf4a;
+  stroke-width: 2;
+  /* stroke-dasharray: 6; */
+}
+  
+.serie_label {
+  fill: #303030;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
