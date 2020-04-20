@@ -1,8 +1,8 @@
 $(function () {
   const data2plot = [
-    ["#plot-camera", "data/camera-arimean-global.csv"],
-    ["#plot-dslr", "data/dslr-arimean-global.csv"],
-    ["#plot-mirrorless", "data/mirrorless-arimean-global.csv"]
+    ["#plot-camera", "data/camera-wtdmean-global.csv"],
+    ["#plot-dslr", "data/dslr-wtdmean-global.csv"],
+    ["#plot-mirrorless", "data/mirrorless-wtdmean-global.csv"]
   ].forEach(r => {
     d3Plot(r[0], r[1]);
   });
@@ -10,11 +10,11 @@ $(function () {
   function d3Plot(placeholder, csvFile) {
     //------------------------1. PREPARATION------------------------//
     //-----------------------------SVG------------------------------//  
-    const width = 960;
+    const width = 700;
     const height = 500;
     const margin = 20;
     const padding = 20;
-    const adj = 30;
+    const adj = 60;
 
     // Append SVG
     const svg = d3.select(placeholder).append("svg")
@@ -67,7 +67,8 @@ $(function () {
 
       yScale.domain([(0), d3.max(slices, c => {
         return d3.max(c.values, d => {
-          let intRound = 2;
+          // return d.val;
+          let intRound = 0.02;
           return Math.ceil(d.val / intRound) * intRound;
           // Round to the nearest greater integer intRound
         });
@@ -76,7 +77,7 @@ $(function () {
 
       //-----------------------------AXES-----------------------------//
       const yaxis = d3.axisLeft()
-        .ticks((slices[0].values).length / 20)
+        // .ticks((slices[0].values).length / 20)
         .scale(yScale);
 
       const xaxis = d3.axisBottom()

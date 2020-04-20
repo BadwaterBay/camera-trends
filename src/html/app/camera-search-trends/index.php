@@ -55,7 +55,7 @@
         </div>
         <div id="plot-mirrorless"></div>
         <p class="footnote">This is work in progress...</p>
-        <div id="plot-map"></div>
+        <!-- <div id="plot-map"></div> -->
       </div>
   </div><!--row-->
 </div><!--maincontent-->
