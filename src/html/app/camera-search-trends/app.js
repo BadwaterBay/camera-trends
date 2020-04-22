@@ -123,6 +123,7 @@ $(function () {
 
       lines.append("text")
         .attr("class", "serie_label")
+        .defined(d => !isNaN(d.value))
         .datum(d => {
           return {
             name: d.name,
