@@ -1,7 +1,7 @@
 # Project NextGen
 
-### Founding team members: Aaron Tang and Skyler Dong (equal partners)
-### Date created: April 4, 2020
+Founding team members: Aaron Tang and Skyler Dong (equal partners)
+Date created: April 4, 2020
 
 ## Our topic is:
 Out of three major camera brands, Canon, Nikon, and Sony, which one
