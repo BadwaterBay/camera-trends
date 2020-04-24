@@ -1,20 +1,24 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+**IMPORTANT: Please do not create a Pull Request without creating an issue first.**
+
+about: This pull request closes issue #XXXX
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Closing issues**
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+Please provide enough information so that others can review your pull request:
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+<!-- You can skip this if you're fixing a typo to the project. -->
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+Explain the **details** for making this change. What existing problem does the pull request solve?
+
+<!-- Example: When "Adding a function to do X", explain why it is necessary to have a way to do X. -->
+
+**Test plan (if applicable)**
+
+Demonstrate the code is solid. Example: The exact commands you ran and their output, screenshots or videos if the pull request changes UI.
+
+**Additional info (if applicable)**
+@mentions of the person or team responsible for reviewing proposed changes, if such.
+
