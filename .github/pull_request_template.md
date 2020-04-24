@@ -1,7 +1,7 @@
 ---
-**IMPORTANT: Please do not create a Pull Request without creating an issue first.**
+**IMPORTANT: Please create an issue before creating a corresponding Pull Request**
 
-about: This pull request closes issue #XXXX
+title: Please includes "Closes issue #XXX: " in the title
 
 ---
 
@@ -17,8 +17,9 @@ Explain the **details** for making this change. What existing problem does the p
 
 **Test plan (if applicable)**
 
-Demonstrate the code is solid. Example: The exact commands you ran and their output, screenshots or videos if the pull request changes UI.
+<!-- Demonstrate the code is solid. Example: The exact commands you ran and their output, screenshots or videos if the pull request changes UI. -->
 
 **Additional info (if applicable)**
 @mentions of the person or team responsible for reviewing proposed changes, if such.
 
+Thank you for contributing to this project.
