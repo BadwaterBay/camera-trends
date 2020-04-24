@@ -1,14 +1,16 @@
 ---
 **IMPORTANT: Please create an issue before creating a corresponding Pull Request**
 
-about: This Pull request closes #XXX
-title: Please also includes "Closes #XXX: " at the beginning of the title
+Add a reference to a related issue in the repository:
+This Pull request closes #XXX
+
+Please also includes "Closes #XXX: " at the beginning of the title
 
 ---
 
 **Closing issues**
 
-Please provide enough information so that others can review your pull request:
+Please provide enough information so your teammates can review your pull request:
 
 <!-- You can skip this if you're fixing a typo to the project. -->
 
