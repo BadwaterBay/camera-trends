@@ -1,5 +1,5 @@
 ---
-**IMPORTANT: Please create an issue before creating a corresponding Pull Request**
+**IMPORTANT: Please don't create a Pull Request before creating an issue first**
 
 Add a reference to a related issue in the repository:
 This Pull request closes #XXX
