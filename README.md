@@ -1,4 +1,4 @@
-# Project NextGen
+# Project Camera-Search-Trends
 
 Founding team members: Aaron Tang (@tangaw) and Skyler Dong (@dongskyler)
 (equal partners)
