@@ -1,7 +1,8 @@
 ---
 **IMPORTANT: Please create an issue before creating a corresponding Pull Request**
 
-title: Please includes "Closes issue #XXX: " in the title
+about: This Pull request closes #XXX
+title: Please also includes "Closes #XXX: " at the beginning of the title
 
 ---
 
