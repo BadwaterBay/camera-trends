@@ -1,6 +1,7 @@
 # Project NextGen
 
-Founding team members: Aaron Tang and Skyler Dong (equal partners)
+Founding team members: Aaron Tang (@tangaw) and Skyler Dong (@dongskyler)
+(equal partners)
 Date created: April 4, 2020
 
 ## Our topic is:
