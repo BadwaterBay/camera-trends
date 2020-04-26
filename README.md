@@ -1,8 +1,8 @@
 # Camera Trends
 
-*[https://app.skylerdong.com/camera-search-trends/](https://app.skylerdong.com/camera-search-trends/)*
+[https://app.skylerdong.com/camera-search-trends/](https://app.skylerdong.com/camera-search-trends/)
 
-*[https://github.com/dongskyler/camera-trends](https://github.com/dongskyler/camera-trends)*
+[https://github.com/dongskyler/camera-trends](https://github.com/dongskyler/camera-trends)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c69ad21db9145c29fc68abd5495727b)](https://www.codacy.com/manual/dongskyler/camera-trends?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dongskyler/camera-trends&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
