@@ -1,5 +1,7 @@
 # Project Camera-Search-Trends
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c2e7d67b37a4c73bb2571d74693bfdb)](https://app.codacy.com/manual/dongskyler/camera-trends?utm_source=github.com&utm_medium=referral&utm_content=dongskyler/camera-trends&utm_campaign=Badge_Grade_Settings)
+
 Founding team members: Aaron Tang (@tangaw) and Skyler Dong (@dongskyler)
 (equal partners)
 
