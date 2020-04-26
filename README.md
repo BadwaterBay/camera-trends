@@ -5,11 +5,11 @@ Founding team members: Aaron Tang (@tangaw) and Skyler Dong (@dongskyler)
 
 Date created: April 4, 2020
 
-https://www.code-inspector.com/project/7045/score/svg
+[![Code Inspector Score](https://www.code-inspector.com/project/7045/score/svg)]
 
-https://www.code-inspector.com/project/7045/status/svg
+[![Code Inspector Rating](https://www.code-inspector.com/project/7045/status/svg)]
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c69ad21db9145c29fc68abd5495727b)](https://www.codacy.com/manual/dongskyler/camera-trends?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dongskyler/camera-trends&amp;utm_campaign=Badge_Grade)
+Codacy Rating [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c69ad21db9145c29fc68abd5495727b)](https://www.codacy.com/manual/dongskyler/camera-trends?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dongskyler/camera-trends&amp;utm_campaign=Badge_Grade)
 
 ## Our motivations
 We'd like to practice our skills in Python data scraping and D3.js
