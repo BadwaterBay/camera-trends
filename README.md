@@ -1,4 +1,6 @@
-# Project Camera Trends
+# Camera Trends
+
+*https://github.com/dongskyler/camera-trends*
 
 [![Code Inspector Rating Badge](https://www.code-inspector.com/project/7045/status/svg)](https://frontend.code-inspector.com/public/project/7045/camera-trends/dashboard)
 [![Code Inspector Score Badge](https://www.code-inspector.com/project/7045/score/svg)](https://frontend.code-inspector.com/public/project/7045/camera-trends/dashboard)
