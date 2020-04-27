@@ -1,36 +1,36 @@
 $(function () {
-  const data_googleTrend = [
+  const dataGoogleTrend = [
     ["#plot-camera", "data/camera-wtdmean-global.csv"],
     ["#plot-dslr", "data/dslr-wtdmean-global.csv"],
     ["#plot-mirrorless", "data/mirrorless-wtdmean-global.csv"]
   ].forEach(r => {
-    plot_googleTrend(r[0], r[1]);
+    plotGoogleTrend(r[0], r[1]);
   });
 
-  const data_revenue = [
+  const dataRevenue = [
     ["#plot-revenue", "data/revenue.csv"]
   ].forEach(r => {
-    plot_revenue(r[0], r[1]);
+    plotRevenue(r[0], r[1]);
   });
 
-  function plot_googleTrend(placeholder, csvFile) {
+  function plotGoogleTrend(placeholder, csvFile) {
     //------------------------1. PREPARATION------------------------//
     //-----------------------------SVG------------------------------//  
     const width = 600;
     const height = 400;
     const margin = 20;
     const padding = 10;
-    const adj_width = 100;
-    const adj_height = 30;
+    const adjWidth = 100;
+    const adjHeight = 30;
 
     // Append SVG
     const svg = d3.select(placeholder).append("svg")
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "-"
-        + adj_width + " -"
-        + adj_height + " "
-        + (width + adj_width * 3) + " "
-        + (height + adj_height * 3))
+        + adjWidth + " -"
+        + adjHeight + " "
+        + (width + adjWidth * 3) + " "
+        + (height + adjHeight * 3))
       .style("padding", padding)
       .style("margin", margin)
       .classed("svg-content", true);
@@ -146,26 +146,26 @@ $(function () {
           return n.charAt(0).toUpperCase() + n.slice(1);
         });
     }); // d3
-  } // function plot_googleTrend
+  } // function plotGoogleTrend
 
-  function plot_revenue(placeholder, csvFile) {
+  function plotRevenue(placeholder, csvFile) {
     //------------------------1. PREPARATION------------------------//
     //-----------------------------SVG------------------------------//  
     const width = 600;
     const height = 400;
     const margin = 20;
     const padding = 10;
-    const adj_width = 100;
-    const adj_height = 30;
+    const adjWidth = 100;
+    const adjHeight = 30;
 
     // Append SVG
     const svg = d3.select(placeholder).append("svg")
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "-"
-        + adj_width + " -"
-        + adj_height + " "
-        + (width + adj_width * 3) + " "
-        + (height + adj_height * 3))
+        + adjWidth + " -"
+        + adjHeight + " "
+        + (width + adjWidth * 3) + " "
+        + (height + adjHeight * 3))
       .style("padding", padding)
       .style("margin", margin)
       .classed("svg-content", true);
