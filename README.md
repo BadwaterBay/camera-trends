@@ -14,7 +14,7 @@ Date created: April 4, 2020
 
 ## Our motivations
 We'd like to practice our skills in Python data scraping and D3.js
-data visualization. We are both photography enthusiast. We are interested
+data visualization. We are both photography enthusiasts. We are interested
 in which camera brand will lead the market in the future.
 
 ## Our question
