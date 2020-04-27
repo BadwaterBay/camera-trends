@@ -54,6 +54,10 @@
           <h3>Google search trends of "mirrorless" by brand</h3>
         </div>
         <div id="plot-mirrorless"></div>
+        <div class="mb-3 text-center">
+          <h3>Annual revenues of camera divisions by brand</h3>
+        </div>
+        <div id="plot-revenue"></div>
         <p class="footnote">This is work in progress...</p>
         <!-- <div id="plot-map"></div> -->
       </div>
