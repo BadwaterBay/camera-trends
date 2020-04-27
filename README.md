@@ -1,16 +1,15 @@
 # Camera Trends
 
-[https://app.skylerdong.com/camera-search-trends/](https://app.skylerdong.com/camera-search-trends/)
+[https://github.com/Badwater-Apps/camera-trends](https://github.com/Badwater-Apps/camera-trends)
 
-[https://github.com/dongskyler/camera-trends](https://github.com/dongskyler/camera-trends)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c69ad21db9145c29fc68abd5495727b)](https://www.codacy.com/manual/dongskyler/camera-trends?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dongskyler/camera-trends&amp;utm_campaign=Badge_Grade)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1080ad5cb7a246b3a1db78bd03645617)](https://www.codacy.com/gh/Badwater-Apps/camera-trends?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Badwater-Apps/camera-trends&amp;utm_campaign=Badge_Grade)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Founding team members: Aaron Tang (@tangaw) and Skyler Dong (@dongskyler)
 (equal partners)
 
 Date created: April 4, 2020
+
+Currently hosted at:[https://github.com/dongskyler/camera-trends](https://github.com/dongskyler/camera-trends)
 
 ## Our motivations
 We'd like to practice our skills in Python data scraping and D3.js
