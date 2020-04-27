@@ -1,18 +1,4 @@
 $(function () {
-  const dataGoogleTrend = [
-    ["#plot-camera", "data/camera-wtdmean-global.csv"],
-    ["#plot-dslr", "data/dslr-wtdmean-global.csv"],
-    ["#plot-mirrorless", "data/mirrorless-wtdmean-global.csv"]
-  ].forEach(r => {
-    plotGoogleTrend(r[0], r[1]);
-  });
-
-  const dataRevenue = [
-    ["#plot-revenue", "data/revenue.csv"]
-  ].forEach(r => {
-    plotRevenue(r[0], r[1]);
-  });
-
   function plotGoogleTrend(placeholder, csvFile) {
     //------------------------1. PREPARATION------------------------//
     //-----------------------------SVG------------------------------//  
@@ -282,4 +268,18 @@ $(function () {
         });
     }); // d3
   }
+
+  const dataGoogleTrend = [
+    ["#plot-camera", "data/camera-wtdmean-global.csv"],
+    ["#plot-dslr", "data/dslr-wtdmean-global.csv"],
+    ["#plot-mirrorless", "data/mirrorless-wtdmean-global.csv"]
+  ].forEach(r => {
+    plotGoogleTrend(r[0], r[1]);
+  });
+
+  const dataRevenue = [
+    ["#plot-revenue", "data/revenue.csv"]
+  ].forEach(r => {
+    plotRevenue(r[0], r[1]);
+  });
 });
