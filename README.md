@@ -2,7 +2,8 @@
 
 [https://github.com/Badwater-Apps/camera-trends](https://github.com/Badwater-Apps/camera-trends)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1080ad5cb7a246b3a1db78bd03645617)](https://www.codacy.com/gh/Badwater-Apps/camera-trends?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Badwater-Apps/camera-trends&amp;utm_campaign=Badge_Grade)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CodeFactor](https://www.codefactor.io/repository/github/badwater-apps/camera-trends/badge)](https://www.codefactor.io/repository/github/badwater-apps/camera-trends)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Currently hosted at:[https://github.com/dongskyler/camera-trends](https://github.com/dongskyler/camera-trends)
 
