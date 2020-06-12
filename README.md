@@ -1,11 +1,13 @@
 # Camera Trends
 
-[https://github.com/Badwater-Apps/camera-trends](https://github.com/Badwater-Apps/camera-trends)
-
-[![CodeFactor](https://www.codefactor.io/repository/github/badwater-apps/camera-trends/badge)](https://www.codefactor.io/repository/github/badwater-apps/camera-trends)
+[![CodeFactor](https://www.codefactor.io/repository/github/badwaterbay/camera-trends/badge)](https://www.codefactor.io/repository/github/badwaterbay/camera-trends)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Currently hosted at:[https://github.com/dongskyler/camera-trends](https://github.com/dongskyler/camera-trends)
+Hosted at: [https://badwaterbay.com/app/camera-trends/](https://badwaterbay.com/app/camera-trends/)
+
+Repository: [https://github.com/BadwaterBay/camera-trends](https://github.com/BadwaterBay/camera-trends)
+
+***
 
 ## Our motivations
 
@@ -22,8 +24,7 @@ We scrape Google trend indices from 2004 to 2020 as a function of time and count
 
 ## Results and discussion
 
-Our final product is shown here:
-[https://app.skylerdong.com/camera-search-trends/](https://app.skylerdong.com/camera-search-trends/)
+Our final product is shown [here](https://badwaterbay.com/app/camera-trends/).
 
 ## Contributing to this project
 
@@ -34,6 +35,4 @@ To contribute to this project, we follow a rather standard approach of open-sour
 
 ## Contributors
 
-[Aaron Tang](https://github.com/tangaw) and [Skyler Dong](https://github.com/dongskyler)
-
-Date created: April 4, 2020
+[https://github.com/BadwaterBay/camera-trends/graphs/contributors](https://github.com/BadwaterBay/camera-trends/graphs/contributors)
