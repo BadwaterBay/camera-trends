@@ -5,7 +5,7 @@
 
 Hosted at: [https://badwaterbay.com/app/camera-trends/](https://badwaterbay.com/app/camera-trends/)
 
-Working repository: [https://github.com/BadwaterBay/camera-trends](https://github.com/BadwaterBay/camera-trends)
+Repository: [https://github.com/BadwaterBay/camera-trends](https://github.com/BadwaterBay/camera-trends)
 
 ***
 
